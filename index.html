@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RS Express | Fashion, Electronics, Beauty & Home</title>
+<meta name="description" content="RS Express is a multi-category online store for fashion, electronics, accessories, beauty and home lifestyle. Free shipping over ৳3,000.">
+<meta property="og:title" content="RS Express | Everyday luxury, delivered fast">
+<meta property="og:description" content="Shop fashion, electronics, accessories, beauty and home essentials in one place.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=70">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="announce"><p>Free shipping on orders over ৳3,000 &nbsp;|&nbsp; Winter Sale: up to 30% off selected styles</p></div>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav"><i class="fa-solid fa-bars"></i></button>
+    <a class="logo" href="#top" aria-label="RS Express home">
+      <svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="currentColor"/><text x="32" y="43" font-family="Georgia,serif" font-size="30" font-weight="700" text-anchor="middle" fill="var(--bg)">RS</text></svg>
+      <span>RS <b>Express</b></span>
+    </a>
+    <nav id="mainNav" class="main-nav" aria-label="Main">
+      <a href="#top">Home</a><a href="#shop">Shop</a><a href="#categories">Categories</a><a href="#new">New Arrivals</a><a href="#best">Best Sellers</a><a href="#why">About</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="actions">
+      <button class="icon-btn" id="searchBtn" aria-label="Search products"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <button class="icon-btn" id="themeBtn" aria-label="Switch to dark mode"><i class="fa-solid fa-moon"></i></button>
+      <button class="icon-btn" id="accountBtn" aria-label="Account"><i class="fa-regular fa-user"></i></button>
+      <button class="icon-btn" id="wishBtn" aria-label="Show wishlist"><i class="fa-regular fa-heart"></i><span class="count" id="wishCount">0</span></button>
+      <button class="icon-btn" id="cartBtn" aria-label="Open cart"><i class="fa-solid fa-bag-shopping"></i><span class="count" id="cartCount">0</span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero container" id="top">
+  <div class="hero-copy">
+    <span class="pill">Winter Sale is live</span>
+    <h1>Everyday luxury, delivered fast.</h1>
+    <p>Fashion, electronics, beauty and home essentials, chosen for quality and priced fairly. One store, carefully curated.</p>
+    <div class="cta-row"><a class="btn btn-brand" href="#shop">Shop now</a><a class="btn btn-ghost" href="#categories">Explore collection</a></div>
+    <ul class="hero-stats"><li><b>12k+</b> orders delivered</li><li><b>4.8</b> average rating</li><li><b>7-day</b> easy returns</li></ul>
+  </div>
+  <div class="hero-visual">
+    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&h=1000&q=70" alt="Shoppers carrying bags on a city street" width="900" height="1000" fetchpriority="high">
+    <div class="float-card"><i class="fa-solid fa-truck-fast"></i><span><b>Free shipping</b><br>on orders over ৳3,000</span></div>
+  </div>
+</section>
+
+<section class="container" id="categories">
+  <div class="head"><h2>Shop by category</h2><p>Five departments, one easy checkout.</p></div>
+  <div class="cat-grid" id="catGrid"></div>
+</section>
+
+<section class="container" id="shop">
+  <div class="head row"><div><h2 id="shopTitle">Trending products</h2><p>What our customers are buying right now.</p></div>
+    <div class="tools"><label class="sr" for="sortSel">Sort products</label>
+      <select id="sortSel"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="rating">Top rated</option><option value="discount">Biggest discount</option></select></div></div>
+  <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
+  <div class="grid" id="shopGrid" aria-live="polite"></div>
+</section>
+
+<section class="container">
+  <div class="promo">
+    <div><span class="pill pill-gold">Limited time</span><h2>Winter Sale: up to 30% off</h2><p>Warm layers, smart gadgets and home upgrades at their lowest prices this season. Offer ends when stock runs out.</p><a class="btn btn-light" href="#shop">Shop the sale</a></div>
+    <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&w=800&h=600&q=70" alt="Bright boutique interior with clothing racks" width="800" height="600" loading="lazy">
+  </div>
+</section>
+
+<section class="container" id="new"><div class="head"><h2>New arrivals</h2><p>Just landed this week.</p></div><div class="grid" id="newGrid"></div></section>
+<section class="container" id="best"><div class="head"><h2>Best sellers</h2><p>The pieces everyone keeps reordering.</p></div><div class="grid" id="bestGrid"></div></section>
+
+<section class="container" id="why">
+  <div class="head"><h2>Why shop with RS Express</h2><p>We built the store around the things that matter after you click buy.</p></div>
+  <div class="why-grid">
+    <div><i class="fa-solid fa-shield-halved"></i><h3>Secure shopping</h3><p>Your details stay protected at every step.</p></div>
+    <div><i class="fa-solid fa-truck-fast"></i><h3>Fast delivery</h3><p>Dispatched within 24 hours, tracked to your door.</p></div>
+    <div><i class="fa-solid fa-rotate-left"></i><h3>Easy returns</h3><p>Change your mind within 7 days, no hassle.</p></div>
+    <div><i class="fa-solid fa-gem"></i><h3>Quality products</h3><p>Every item is checked before it ships.</p></div>
+    <div><i class="fa-solid fa-headset"></i><h3>Customer support</h3><p>Real people, 9am to 9pm, every day.</p></div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="head"><h2>Loved by our customers</h2></div>
+  <div class="reviews">
+    <figure><span class="avatar">NA</span><div class="stars" aria-label="5 out of 5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><blockquote>The headphones arrived in two days and sound far better than the price suggests. Packaging was excellent.</blockquote><figcaption>Nusrat A., Dhaka</figcaption></figure>
+    <figure><span class="avatar">TH</span><div class="stars" aria-label="5 out of 5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><blockquote>I returned a jacket that did not fit and got a refund without any questions. I will order again.</blockquote><figcaption>Tanvir H., Chattogram</figcaption></figure>
+    <figure><span class="avatar">SR</span><div class="stars" aria-label="4 out of 5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div><blockquote>The skincare set is lovely and the support team answered my questions the same day.</blockquote><figcaption>Sadia R., Sylhet</figcaption></figure>
+  </div>
+</section>
+
+<section class="container">
+  <form class="news" id="newsForm" novalidate>
+    <div><h2>Get 10% off your first order</h2><p>Join our newsletter for new arrivals and private sales.</p></div>
+    <div class="news-field"><label class="sr" for="email">Email address</label>
+      <input id="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+      <button class="btn btn-brand" type="submit">Subscribe</button>
+      <p id="newsMsg" role="status"></p></div>
+  </form>
+</section>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="container foot-grid">
+    <div><a class="logo" href="#top"><span>RS <b>Express</b></span></a><p>A multi-category store for fashion, electronics, beauty and home, built on honest prices and fast delivery.</p>
+      <p class="social"><a href="#" data-info="Facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" data-info="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" data-info="YouTube" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><a href="#" data-info="X" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a></p></div>
+    <div><h3>Quick links</h3><a href="#shop">Shop</a><a href="#new">New arrivals</a><a href="#best">Best sellers</a><a href="#why">About us</a></div>
+    <div><h3>Support</h3><a href="#" data-info="Help centre">Help centre</a><a href="#" data-info="Order tracking">Track order</a><a href="#" data-info="Size guide">Size guide</a><a href="#" data-info="FAQ">FAQ</a></div>
+    <div><h3>Policies</h3><a href="#" data-info="Shipping policy">Shipping</a><a href="#" data-info="Returns policy">Returns</a><a href="#" data-info="Privacy policy">Privacy</a><a href="#" data-info="Terms of service">Terms</a></div>
+    <div><h3>Contact</h3><p><i class="fa-solid fa-location-dot"></i> Dhaka, Bangladesh</p><p><i class="fa-solid fa-envelope"></i> hello@rsexpress.example</p><p><i class="fa-solid fa-phone"></i> +880 1700-000000</p></div>
+  </div>
+  <div class="container foot-bar"><p>&copy; <span id="year">2026</span> RS Express. Demo storefront: checkout and payments are not implemented.</p>
+    <p class="pay" aria-label="Payment methods"><i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-cc-mastercard"></i><i class="fa-brands fa-cc-amex"></i><i class="fa-brands fa-cc-paypal"></i><span>bKash</span><span>Nagad</span></p></div>
+</footer>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
+  <div class="drawer-head"><h2>Your cart</h2><button class="icon-btn" id="cartClose" aria-label="Close cart"><i class="fa-solid fa-xmark"></i></button></div>
+  <div class="drawer-body" id="cartItems"></div>
+  <div class="drawer-foot"><p class="sub"><span>Subtotal</span><b id="cartSub">৳0</b></p>
+    <button class="btn btn-brand wide" id="checkoutBtn">Checkout</button>
+    <p class="note">Demo only: checkout and payment are not implemented.</p></div>
+</aside>
+
+<dialog id="searchDlg" aria-label="Search products"><div class="dlg-pad"><label class="sr" for="searchInput">Search products</label>
+  <input id="searchInput" type="search" placeholder="Search products or categories" autocomplete="off"><ul id="searchRes" class="res"></ul>
+  <button class="icon-btn dlg-x" data-close aria-label="Close search"><i class="fa-solid fa-xmark"></i></button></div></dialog>
+<dialog id="quickDlg" aria-label="Product quick view"><div class="quick-body" id="quickBody"></div><button class="icon-btn dlg-x" data-close aria-label="Close quick view"><i class="fa-solid fa-xmark"></i></button></dialog>
+<div id="toasts" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
